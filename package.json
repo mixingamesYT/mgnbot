@@ -1,0 +1,21 @@
+{
+  "name": "boss_bot",
+  "version": "1.0.0",
+  "description": "de hoofd bot voor mijn discord server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "keywords": [
+    "boss",
+    "bot"
+  ],
+  "author": "Mixin",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "ms": "^2.1.2",
+    "nodemon": "^1.19.1"
+  }
+}
