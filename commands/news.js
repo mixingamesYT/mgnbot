@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
             .setColor("00ee00")
             .setDescription(`!news Title ${split} Color ${split} Channel ${split} Message`)
 
-        message.channel.send(useMessage).then(msg => msg.delete(5000));
+        return message.channel.send(useMessage).then(msg => msg.delete(5000));
 
     }
 
