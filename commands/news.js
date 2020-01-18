@@ -17,8 +17,6 @@ module.exports.run = async (bot, message, args) => {
     try{
         var newsMessage = args.join(" ");
 
-        var newsChannel = message.guild.channels.find(`name`, "news");
-
         var newsEmbed = new discord.RichEmbed()
             .setDescription("News message")
             .setColor("#21fff0")
