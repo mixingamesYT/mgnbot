@@ -15,10 +15,10 @@ module.exports.run = async (bot, message, args) => {
         .setColor("00ee00")
         .setDescription(`?news Title ${split} Color ${split} Channel ${split} Message`);
 
-        return message.channel.send(useMessage);
+        return message.channel.send(useMessage).then(msg => msg.delete(5000));
 
     }
-    
+
     try{
         var newsMessage = args.join(" ");
 
@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
 
     } catch (error){
         message.channel.send("Something went wrong").then(msg => msg.delete(3000));
-        console.log("Someone issued the news command");
+        console.log(`Someone issued the news command ${error}`);
     }
 
 }
