@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
             var useMessage = new discord.RichEmbed()
             .setTitle("Use:")
             .setColor("00ee00")
-           .setDescription(`?news Title ${split} Color ${split} Channel ${split} Message`);
+            .setDescription(`?news Title ${split} Color ${split} Channel ${split} Message`);
 
             return message.channel.send(useMessage).then(msg => msg.delete(5000));
   
