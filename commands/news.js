@@ -10,12 +10,16 @@ module.exports.run = async (bot, message, args) => {
 
     if(!args[0] == null){
         
-        var useMessage = new discord.RichEmbed
-            .setTitle("Use:")
-            .setColor("00ee00")
-            .setDescription(`!news Title ${split} Color ${split} Channel ${split} Message`);
+        try{
+            var useMessage = new discord.RichEmbed
+                .setTitle("Use:")
+                .setColor("00ee00")
+                .setDescription(`!news Title ${split} Color ${split} Channel ${split} Message`);
 
-        return message.channel.send(useMessage).then(msg => msg.delete(5000));
+            return message.channel.send(useMessage).then(msg => msg.delete(5000));
+        } catch (error){
+            console.log(error);
+        }
 
     }
 
