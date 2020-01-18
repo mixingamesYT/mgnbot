@@ -9,19 +9,9 @@ module.exports.run = async (bot, message, args) => {
     var split = "||";
 
     if(!args[0] == null){
-        try{
+        
+        return message.channel.send(`Use: !news Title ${split} Color ${split} Channel ${split} Message`).then(msg => msg.delete(5000));
 
-            var useMessage = new discord.RichEmbed()
-                .setTitle("Use:")
-                .setColor("00ee00")
-                .setDescription(`?news Title ${split} Color ${split} Channel ${split} Message`);
-
-            return message.channel.send(useMessage).then(msg => msg.delete(5000));
-  
-        } catch (error){
-            message.channel.send("Something went wrong").then(msg => msg.delete(3000));
-            console.log(`Someone issued the news command ${error}`);
-        }
     }
 
     try{
