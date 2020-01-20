@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     var serverIcon = message.guild.iconURL
 
     var serverEmbed = new discord.RichEmbed()
-        .setDescription("About this server")
+        .setTitle("**About this server**")
         .setColor("#29e53f")
         .setThumbnail(serverIcon)
         .addField("Name of this server:", message.guild.name)
