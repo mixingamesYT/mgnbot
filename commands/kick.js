@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Kicked by:", message.author)
         .addField("Reason", reason);
 
-    var kickChannel = message.guild.channels.find(`name`, "logs");
+    var kickChannel = message.guild.channels.find(c => c.name == "logs");
     if (!kickChannel) return message.channel.send("You must have a channel named logs!");
 
     message.guild.member(kickUser).kick(reason);
