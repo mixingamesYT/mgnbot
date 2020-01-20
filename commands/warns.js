@@ -37,7 +37,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Warn count:", warns[user.id].warns)
         .addField("Reason", reason);
 
-    var warnChannel = message.guild.channels.find(`name`, "logs");
+    var warnChannel = message.guild.channels.find(c => c.name == "logs");
     if (!warnChannel) return message.channel.send("You must have a channel named logs!");
 
     warnChannel.send(warnEmbed);
