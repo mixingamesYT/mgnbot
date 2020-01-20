@@ -12,7 +12,12 @@ module.exports.run = async (bot, message, args) => {
 
         return message.channel.send("**THE NEWS UPDATE** \n\nRelease of the news command! \nHow you use it : \n?news Title // Color // Channel // Message \nStill only for Admin!\n")
 
-    } else{
+    } else if(args[0] == "1.1.2") {
+
+        return message.channel.send("**THE TEMPBAN UPDATE!** \n\nRelease of the tempban command! \nAlso only for admin!")
+
+    }    
+    else{
         return message.channel.send("**Error:** there are only updatelogs beginning from 1.1 or this update doesn't exist").then(msg => msg.delete(5000));
     }
     
