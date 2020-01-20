@@ -21,7 +21,7 @@ module.exports.run = async(bot, message, args) =>{
     if(!reason) return message.channel.send("Give a reason!").then(msg => msg.delete(5000));
 
     var banChannel = message.guild.channels.find(c => c.name == "logs");
-    if (!banChannel) return message.channel.send("You must have a channel named logs!");
+    if (!banChannel) return message.channel.send("You must have a channel named logs!").then(msg => msg.delete(5000));
 
     if(ms(tempBanTime)){
 
