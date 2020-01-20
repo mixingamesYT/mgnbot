@@ -41,7 +41,7 @@ module.exports.run = async(bot, message, args) =>{
         .setDescription(`Message by ${writer} \n\n${options.bericht} \n`)
         .setTimestamp();
 
-    var newsChannel = message.guild.channels.find(`name`, options.kanaal);
+    var newsChannel = message.guild.channels.find(c => c.name == options.kanaal);
     if(!newsChannel) return message.channel.send("Didn't find the channel").then(msg => msg.delete(5000));
 
     newsChannel.send(newsMessage);
