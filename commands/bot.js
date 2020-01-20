@@ -11,8 +11,8 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#29e53f")
         .setThumbnail(botIcon)
         .addField("Name of this bot:", "AllesServer English")
-        .addField("Version:", "1.1.1")
-        .addField("New features", "Added new commands! \n(type ?updatelog 1.1.1 for the whole updatelog of this version)")
+        .addField("Version:", "1.1.2")
+        .addField("New features", "Added a tampban command! \n(type ?updatelog 1.1.2 for the whole updatelog of this version)")
         .addField("Bot created at", bot.user.createdAt);
 
     return message.channel.send(botEmbed);
