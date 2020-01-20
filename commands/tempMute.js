@@ -23,13 +23,28 @@ module.exports.run = async (bot, message, args) => {
 
     await (user.addRole(muteRole.id));
 
-    message.channel.send(`${user} is muted for ${muteTime}`).then(msg => msg.delete(5000));
+    var logs = message.guild.channels.find(c => c.name == "logs");
+    if (!logs) return message.channel.send("You must have a channel named logs!");
+
+    var mute = new discord.RichEmbed()
+        .setDescription("ban")
+        .setColor("#ee0000")
+        .addField("muted user:", user)
+        .addField("muted by:", message.author)
+        .addField("muted for", muteTime);
+
+    logs.send(mute);
 
     setTimeout(function() {
 
         user.removeRole(muteRole.id);
 
-        message.channel.send(`${user} is unmuted`);
+        var unMute = new discord.RichEmbed()
+        .setTitle("unmute")
+        .setColor("#ee0000")
+        .setDescription(`${user} is unmuted`);
+
+    logs.send(unMute);
 
     }, ms(muteTime));
 
