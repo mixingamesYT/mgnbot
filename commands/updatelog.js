@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
     } else if(args[0] == "1.1.2") {
 
-        return message.channel.send("**THE TEMPBAN UPDATE!** \n\nRelease of the tempban command! \nAlso only for admin!")
+        return message.channel.send("**THE TEMPBAN UPDATE!** \n\nRelease of the tempban command! \nAlso only for admin!");
 
     }    
     else{
